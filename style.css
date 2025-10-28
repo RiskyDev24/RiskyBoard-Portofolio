@@ -1,0 +1,186 @@
+/* =======================
+   RiskyBoard Final CSS
+   ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #0e1424;
+  color: #e6f7ff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #10182f, #0e1320);
+  color: #00eaff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00fff7;
+}
+
+.sidebar nav a {
+  color: #b3d9ff;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: rgba(0, 234, 255, 0.15);
+  color: #00fff7;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #151b2f;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #00fff7;
+}
+
+#toggleSidebar {
+  background: none;
+  color: #fff;
+  border: 2px solid #00eaff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#toggleSidebar:hover {
+  background: #00eaff;
+  color: #001;
+}
+
+/* Overview Cards */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1b2238;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.06);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0, 255, 247, 0.12);
+}
+
+.card h3 {
+  color: #00eaff;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.card .value {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 600;
+}
+.status.up { color: #00ff88; }
+.status.down { color: #ff4d4d; }
+
+/* Chart */
+.chart-section {
+  padding: 20px;
+}
+.chart-section h2 {
+  color: #00fff7;
+  margin-bottom: 12px;
+}
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 200px;
+  background: #141a2b;
+  padding: 12px;
+  border-radius: 10px;
+}
+.bar {
+  flex: 1;
+  background: linear-gradient(180deg, #00eaff, #0093e9);
+  border-radius: 4px;
+  animation: grow 2s ease-in-out infinite alternate;
+}
+
+@keyframes grow {
+  from { transform: scaleY(0.8); }
+  to { transform: scaleY(1); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 13px;
+  background: #0f1628;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+footer span {
+  color: #00fff7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  #toggleSidebar {
+    display: block;
+  }
+}
