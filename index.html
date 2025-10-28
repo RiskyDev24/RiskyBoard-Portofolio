@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiskyBoard | Dashboard Analytics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RiskyBoard</div>
+    <nav>
+      <a href="#" class="active">🏠 Dashboard</a>
+      <a href="#">📊 Statistik</a>
+      <a href="#">📦 Produk</a>
+      <a href="#">💬 Pesan</a>
+      <a href="#">⚙️ Pengaturan</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <header class="header">
+      <h1>Dashboard Analytics</h1>
+      <button id="toggleSidebar">☰</button>
+    </header>
+
+    <section class="overview">
+      <div class="card">
+        <h3>Total Penjualan</h3>
+        <p class="value">Rp 12.340.000</p>
+        <span class="status up">+8.2%</span>
+      </div>
+      <div class="card">
+        <h3>Pengguna Aktif</h3>
+        <p class="value">1.248</p>
+        <span class="status down">-3.5%</span>
+      </div>
+      <div class="card">
+        <h3>Pesanan Baru</h3>
+        <p class="value">325</p>
+        <span class="status up">+5.4%</span>
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <h2>Statistik Penjualan Mingguan</h2>
+      <div class="chart" id="fakeChart">
+        <div class="bar" style="height: 60%;"></div>
+        <div class="bar" style="height: 85%;"></div>
+        <div class="bar" style="height: 45%;"></div>
+        <div class="bar" style="height: 70%;"></div>
+        <div class="bar" style="height: 90%;"></div>
+        <div class="bar" style="height: 55%;"></div>
+        <div class="bar" style="height: 75%;"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>@2025 <span>RiskyDev</span> | Frontend Dashboard Portfolio</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
